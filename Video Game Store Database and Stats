@@ -20,7 +20,8 @@ INSERT INTO video_games VALUES(15, "God of War", 50, 11, "Action/Adventure", 65)
 -display the database-
 SELECT * FROM video_games;
 
--display the database ordered by rank(most popular)- 
+-display the database ordered by rank(most popular)-
+SELECT * FROM video_games ORDER BY rank;
 
 -display the database ordered by price from cheapest to most expensive- 
 SELECT * FROM video_games ORDER BY price asc;
