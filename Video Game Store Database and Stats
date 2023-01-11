@@ -1,0 +1,29 @@
+CREATE TABLE video_games(id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, rank INTEGER, game_genre TEXT, price INTEGER);
+
+INSERT INTO video_games VALUES(1, "Halo 3", 60, 3, "FPS", 25);
+INSERT INTO video_games VALUES(2, "Modern Warfare 2", 30, 2, "FPS",25);
+INSERT INTO video_games VALUES(3, "Alan Wake", 60, 4, "Action/Adventure", 15);
+INSERT INTO video_games VALUES(4, "Assassin's Creed", 15, 5, "Action/Adventure", 20);
+INSERT INTO video_games VALUES(5, "Outlast", 10, 7, "Horror", 15);
+INSERT INTO video_games VALUES(6, "Animal Crossing", 100, 8, "Simulation", 60);
+INSERT INTO video_games VALUES(7, "Portal 2", 5, 6, "Puzzle", 5);
+INSERT INTO video_games VALUES(8, "Fallout 3", 50, 9, "Action/Adventure", 10);
+INSERT INTO video_games VALUES(9, "Need for Speed", 2, 10, "Racing", 5);
+INSERT INTO video_games VALUES(10, "Mario Kart", 30, 13, "Racing", 60);
+INSERT INTO video_games VALUES(11, "Skyrim", 5, 14, "Adventure", 30);
+INSERT INTO video_games VALUES(12, "Ultra Street Fighter 4", 2, 12, "Fighter", 25);
+INSERT INTO video_games VALUES(13, "The Legend of Zelda: Breath of the Wild", 80, 15, "Adventure", 60);
+INSERT INTO video_games VALUES(14, "The Last of Us", 100, 1, "Action/Adventure", 65);
+INSERT INTO video_games VALUES(15, "God of War", 50, 11, "Action/Adventure", 65);
+
+
+-display the database-
+SELECT * FROM video_games;
+
+-display the database ordered by rank(most popular)- 
+
+-display the database ordered by price from cheapest to most expensive- 
+SELECT * FROM video_games ORDER BY price asc;
+
+-what is the average price of video games in the store?-
+SELECT avg(price) FROM video_games;
