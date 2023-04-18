@@ -28,3 +28,37 @@ SELECT * FROM video_games ORDER BY price asc;
 
 -what is the average price of video games in the store?-
 SELECT avg(price) FROM video_games;
+
+/* Create table about the people and what they do here */
+
+CREATE TABLE singers (id INTEGER PRIMARY KEY, name TEXT, popular_songs TEXT, world_rank INTEGER);
+
+INSERT INTO singers VALUES (1, "Joji", "SLOW DANCING IN THE DARK" , 127);
+INSERT INTO singers VALUES (2, "Harry Styles", "As It Was" , 13);
+INSERT INTO singers VALUES (3, "Taylor Swift", "Blank Space" , 4);
+INSERT INTO singers VALUES (4, "The Weeknd", "Bliding Lights" , 1);
+INSERT INTO singers VALUES (5, "JVKE", "golden hour" , 124);
+INSERT INTO singers VALUES (6, "Beabadoobee", "death bed(coffee for your head)", 354);
+INSERT INTO singers VALUES (7, "Billie Eilish", "lovely", 34);
+INSERT INTO singers VALUES (8, "Drake", "One Dance", 10);
+
+SELECT * FROM singers;
+
+CREATE TABLE singer_hobbies (id INTEGER PRIMARY KEY, hobby_name TEXT, hobby_difficulty TEXT);
+
+INSERT INTO singer_hobbies VALUES (1, "Gardening", "Hard");
+INSERT INTO singer_hobbies VALUES (2, "Playing video games", "Easy");
+INSERT INTO singer_hobbies VALUES (3, "Baking", "Intermediate");
+INSERT INTO singer_hobbies VALUES (4, "Fishing", "Hard");
+INSERT INTO singer_hobbies VALUES (5, "Reading", "Easy");
+INSERT INTO singer_hobbies VALUES (6, "Writing Music", "Hard");
+INSERT INTO singer_hobbies VALUES (7, "Dancing", "Intermediate");
+INSERT INTO singer_hobbies VALUES (8, "Ice Skating", "Intermediate");
+
+SELECT * FROM singer_hobbies;
+
+SELECT singers.name, singer_hobbies.hobby_name, singer_hobbies.hobby_difficulty FROM singers
+JOIN singer_hobbies
+ON singers.id = singer_hobbies.id
+ORDER BY hobby_difficulty asc;
+
